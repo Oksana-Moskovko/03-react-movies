@@ -15,12 +15,9 @@ export default function App() {
    const [isLoading, setIsLoading] = useState<boolean>(false)
   const [error, setError] = useState<boolean>(false)
 
-  const handleSelectMovie = (movieId: number) => {
-  const movie = movies.find((m) => m.id === movieId);
-  if (movie) {
+  const handleSelectMovie = (movie: Movie) => {
     setSelectedMovie(movie);
-  }
-};
+  };
   
   const handleMovie = async (query: string) => {
     try {
